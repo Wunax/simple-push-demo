@@ -22,6 +22,7 @@ self.addEventListener('push', function(event) {
 		const dataText = event.data.text();
 		notificationTitle = 'Received Payload';
 		notificationOptions.body = `Push data: '${dataText}'`;
+		notificationOptions.tag = 'payload-demo';
 	}
 
 	event.waitUntil(
